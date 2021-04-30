@@ -1,10 +1,21 @@
 <script>
   import { Router } from "@roxi/routify";
   import { routes } from "../.routify/routes";
+  import Nav from "./components/Nav/Nav.svelte"
 </script>
 
 <style  global>
   @import "../assets/global.css";
+
+  :global(*) {
+    font-family: 'Roboto', sans-serif;
+  }
 </style>
+
+<svelte:head>
+  <title>Ellis Pest Control</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+</svelte:head>
 
 <Router {routes} />

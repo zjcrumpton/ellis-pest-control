@@ -24,6 +24,8 @@
     "routify": "routify"
   },
   "devDependencies": {
+    "@iconify-icons/mdi": "^1.1.15",
+    "@iconify/svelte": "^1.0.4",
     "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
     "@roxi/routify": "^2.12.4",
