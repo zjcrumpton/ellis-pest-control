@@ -2,16 +2,12 @@
   import IconifyIcon from '@iconify/svelte'
   import bugIcon from '@iconify-icons/mdi/shield-bug-outline'
   import downIcon from '@iconify-icons/mdi/arrow-down-thick'
-  import phoneIcon from '@iconify-icons/mdi/phone-classic'
   import Button from '../ui/Button/Button.svelte'
+  import { fly } from 'svelte/transition'
 </script>
 
 <section>
-  <div class="phone">
-    <IconifyIcon icon={phoneIcon} color="#d7d8db" />
-    <h2>1-800-214-8911</h2>
-  </div>
-  <div class="content">
+  <div class="content" transition:fly="{{ x: -500, duration: 800 }}">
     <div class="textContent">
       <h1>Nobody Likes Bed Bugs</h1>
       <p>
@@ -26,8 +22,8 @@
       </ul>
 
       <div class="buttons">
-        <Button text="Build a Quote" type="m10"/>
-        <Button text="Learn More" type="m10-clear"/>
+        <Button text="Build a Quote" type="m10" link="./booking" />
+        <Button text="Learn More" type="m10-clear" link="./education" />
       </div>
 
     </div>
@@ -40,7 +36,7 @@
     </div>
   </div>
 
-  <div class="flex-center">
+  <div class="flex-center"  transition:fly="{{ x: -500, duration: 800 }}">
     <IconifyIcon icon={downIcon} width="100%"  />
   </div>
 </section>
@@ -123,24 +119,6 @@
     font-size: 2vw;
     line-height: 1.3;
   }
-
-  .phone {
-    position: absolute;
-    top: 90px;
-    right: 50px;
-    font-family: Roboto, sans-serif;
-    color: #d7d8db;
-    font-size: 1.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-  }
-
-  h2 { 
-    margin-left: 10px;
-  }
-
   @media screen and (max-width: 860px) {
     .content {
       display: block;

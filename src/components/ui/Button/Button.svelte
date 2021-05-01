@@ -16,9 +16,18 @@
     </a>
   </div>
 {:else}
-  <button class={type}>
-    {text}
-  </button>
+  {#if link !== './index'}
+  <a href={link}>
+    <button on:click={action} class={type}>
+      {text}
+    </button>
+  </a>
+  {:else}
+    <button class={type}>
+      {text}
+    </button>
+  {/if}
+
 {/if}
 
 
