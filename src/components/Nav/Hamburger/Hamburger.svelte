@@ -19,7 +19,7 @@
     cursor: pointer;
   }
 
-  @media screen and (min-width: 860px) {
+  @media screen and (min-width: 861px) {
     div {
       display: none;
     }

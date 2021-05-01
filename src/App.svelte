@@ -10,6 +10,11 @@
   :global(*) {
     font-family: 'Roboto', sans-serif;
   }
+
+  :global(html) {
+    height: 100%;
+    background: #161d25;
+  }
 </style>
 
 <svelte:head>

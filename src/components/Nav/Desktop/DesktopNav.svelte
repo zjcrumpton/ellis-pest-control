@@ -64,7 +64,7 @@
   }
 
   nav {
-    background: #161d25;
+    background: #000000;
     height: 50px;
     display: flex;
     justify-content: space-between;
