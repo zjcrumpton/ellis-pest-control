@@ -101,5 +101,13 @@
     .navLink {
       display: none; 
     }
+
+    .m10 {
+      font-size: 15px;
+    }
+
+    .m10-clear {
+      font-size: 15px;
+    }
   }
 </style>

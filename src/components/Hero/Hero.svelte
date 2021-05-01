@@ -41,7 +41,7 @@
   </div>
 
   <div class="flex-center">
-    <IconifyIcon icon={downIcon} width="5%"  />
+    <IconifyIcon icon={downIcon} width="100%"  />
   </div>
 </section>
 
@@ -49,9 +49,11 @@
   .flex-center {
     display: flex;
     justify-content: center;
+    margin: 0 auto;
     margin-top: 40px;
     cursor: pointer;
     color: white;
+    width: 50px;
   }
 
   .flex-center:hover {
@@ -137,5 +139,50 @@
 
   h2 { 
     margin-left: 10px;
+  }
+
+  @media screen and (max-width: 860px) {
+    .content {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      /* justify-content: center; */
+    }
+
+    .textContent {
+      margin: 0;
+      justify-content: center;
+      text-align: center;
+    }
+
+    ul {
+      text-align: left;
+      font-size: 20px;
+    }
+
+    .buttons {
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 45px;
+      line-height: 1.2;
+    }
+
+    p {
+      text-align: left;
+      font-size: 25px;
+    }
+
+    .homeImage {
+      display: none;
+    }
+
+    .flex-center {
+      justify-content: center;
+      width: 50px;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
   }
 </style>
