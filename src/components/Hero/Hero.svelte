@@ -4,10 +4,17 @@
   import downIcon from '@iconify-icons/mdi/arrow-down-thick'
   import Button from '../ui/Button/Button.svelte'
   import { fly } from 'svelte/transition'
+
+  const scrollToInfo = () => {
+    console.log('scrolling')
+    document.getElementById('info').scrollIntoView({
+      behavior: "smooth"
+    });
+  }
 </script>
 
-<section>
-  <div class="content" transition:fly="{{ x: -500, duration: 800 }}">
+<section transition:fly="{{ x: -500, duration: 800 }}">
+  <div class="content" >
     <div class="textContent">
       <h1>Nobody Likes Bed Bugs</h1>
       <p>
@@ -23,7 +30,7 @@
 
       <div class="buttons">
         <Button text="Build a Quote" type="m10" link="./booking" />
-        <Button text="Learn More" type="m10-clear" link="./education" />
+        <Button text="Learn More" type="m10-clear"  action={scrollToInfo} />
       </div>
 
     </div>
@@ -36,8 +43,8 @@
     </div>
   </div>
 
-  <div class="flex-center"  transition:fly="{{ x: -500, duration: 800 }}">
-    <IconifyIcon icon={downIcon} width="100%"  />
+  <div class="flex-center" on:click={scrollToInfo}>
+    <IconifyIcon icon={downIcon} width="100%" />
   </div>
 </section>
 

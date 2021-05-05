@@ -23,7 +23,7 @@
     </button>
   </a>
   {:else}
-    <button class={type}>
+    <button on:click={action} class={type}>
       {text}
     </button>
   {/if}
