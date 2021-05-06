@@ -5,12 +5,14 @@
   export let action = () => {
     console.log('button action clicked');
   }
+
+  const buttonClasses = type === 'navLink' ? 'navLink' : null;
 </script>
 
 {#if type === 'link' || type === 'navLink'}
   <div>
     <a href={link}>
-      <button on:click={action} class={`default ${type === 'navLink' ? 'navLink' : ''}`}>
+      <button on:click={action} class={['default', buttonClasses].join(' ')}>
         {text}
       </button>
     </a>

@@ -23,7 +23,7 @@
 <DesktopNav {links} toggleOpen={toggleOpen}/>
 <div class="phone">
   <IconifyIcon icon={phoneIcon} color="#d7d8db" />
-  <h2>1-800-214-8911</h2>
+  <span>1-800-214-8911</span>
 </div>
 
 <style>
@@ -39,7 +39,7 @@
     align-items: center;
   }
 
-  h2 { 
+  span { 
     margin-left: 10px;
   }
 </style>

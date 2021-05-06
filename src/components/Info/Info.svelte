@@ -5,12 +5,17 @@
   import bug from '@iconify-icons/mdi/bug';
   import table from '@iconify-icons/mdi/table-furniture';
   import Graphic from './Graphic/Graphic.svelte'
-
-  
-  
-
-
-
+  const graphicRender = [
+    {icon: book, title: "Educate"},
+    {icon: table, title: "Prep"},
+    {icon: bug, title: "Exterminate"},
+    {icon: book, title: "Restore"},
+  ]
+  let activeGraphic;
+  const setActiveGraphic = (graphicId) => {
+    if(graphicId === activeGraphic) return activeGraphic = null;
+    else return activeGraphic = graphicId;
+  }
 </script>
 
 <section id="info">
@@ -24,32 +29,15 @@
 
   </header>
   <div>
-    <Graphic 
-      icon={book} 
-      title="Educate" 
-    />
-   
-    <Graphic 
-      icon={table}
-      title="Prep"
-    />
-
-    <Graphic 
-      icon={bug}
-      title="Exterminate"
-    />
-
-    <Graphic 
-      icon={restore}
-      title="Restore"
-    />
+    {#each graphicRender as graphicItem, i}
+      <Graphic id={i} icon={graphicItem.icon} title={graphicItem.title} setActive={setActiveGraphic} expanded={i===activeGraphic}/>
+    {/each}
   </div>
 </section>
 
 <style>
   section {
     margin-top: 100px;
-    height: 20000px;
     font-family: Roboto, sans-serif;
     color: white;
     padding: 20px;
