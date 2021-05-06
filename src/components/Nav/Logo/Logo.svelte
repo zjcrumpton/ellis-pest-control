@@ -17,7 +17,7 @@
     cursor: pointer;
     text-decoration: none;
     color: white;
-    margin-left: 30px;
+    margin-left: 20px;
   }
 
   h1 {
