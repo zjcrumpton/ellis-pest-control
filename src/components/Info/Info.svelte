@@ -9,7 +9,7 @@
     {icon: book, title: "Educate"},
     {icon: table, title: "Prep"},
     {icon: bug, title: "Exterminate"},
-    {icon: book, title: "Restore"},
+    {icon: restore, title: "Restore"},
   ]
   let activeGraphic;
   const setActiveGraphic = (graphicId) => {
@@ -22,11 +22,9 @@
   <header>
     <h1>Our Process</h1>
     <hr>
-
     <h3>
       We're here to help at every step of the way.
     </h3>
-
   </header>
   <div>
     {#each graphicRender as graphicItem, i}

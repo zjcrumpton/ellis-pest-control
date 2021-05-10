@@ -20,7 +20,7 @@
     {content}
   </p>
   <div>
-    <IconifyIcon icon={collapse} color="#01a954" width={30} />
+    <IconifyIcon icon={expanded ? collapse : expand} color="#01a954" width={30} />
   </div>
 
 </article>
@@ -36,13 +36,8 @@
     padding: 20px;
     min-width: 180px;
     cursor: pointer;
-    transition: all 2s ease-in-out;
     
   }
-  article:hover {
-    opacity: 70%;
-  }
-
   div {
     margin-top: 15px;
   }
