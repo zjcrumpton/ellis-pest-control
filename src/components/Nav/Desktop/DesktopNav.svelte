@@ -3,12 +3,15 @@
   import Logo from '../Logo/Logo.svelte';
   import Button from '../../ui/Button/Button.svelte';
   import Hamburger from '../Hamburger/Hamburger.svelte'
+  import SubNav from '../SubNav/SubNav.svelte';
 
   // Props
   export let toggleOpen;
   export let links;
-
-
+  let activeSubnav;
+  const setSubnavActive = (category) => {
+    activeSubnav = activeSubnav ? '' : category; 
+  }
 </script>
 
 <nav>
@@ -17,11 +20,14 @@
   <!-- Only shows on desktop  -->
   <div class="navMenu">
     {#each links as [path, name]}
-      <li >
-        <a href={$url(path)}  class:active={$isActive(path)}>
-          {name}
-        </a>
-      </li>
+      <div on:mouseenter={()=>setSubnavActive(name)} on:mouseleave={setSubnavActive}>
+        <li >
+          <a href={$url(path)}  class:active={$isActive(path)}>
+            {name}
+          </a>
+        </li>
+        <SubNav activeSubnav={activeSubnav===name} category={name.toLowerCase()}/>
+      </div>
     {/each}
   </div>
 
@@ -48,6 +54,7 @@
 
   .navMenu {
     display: flex;
+    position: relative;
     align-items: center;
     margin-right: 50px;
     margin-right: 30px;
