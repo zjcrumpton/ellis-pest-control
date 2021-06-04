@@ -5,6 +5,8 @@
   import bug from '@iconify-icons/mdi/bug';
   import table from '@iconify-icons/mdi/table-furniture';
   import Graphic from './Graphic/Graphic.svelte'
+  import Button from '../ui/Button/Button.svelte'
+  
   const graphicRender = [
     {icon: book, title: "Educate"},
     {icon: table, title: "Prep"},
@@ -26,10 +28,13 @@
       We're here to help at every step of the way.
     </h3>
   </header>
-  <div>
+  <div class="graphics">
     {#each graphicRender as graphicItem, i}
       <Graphic id={i} icon={graphicItem.icon} title={graphicItem.title} setActive={setActiveGraphic} expanded={i===activeGraphic}/>
     {/each}
+    <div class="center">
+      <Button text="Build a Quote" type="m10" link="./booking" />
+    </div>
   </div>
 </section>
 
@@ -42,9 +47,17 @@
     padding-top: 50px;
   }
 
+  .center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+  }
+
   h1 {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     font-size: 1.8em;
   }
 
@@ -54,9 +67,10 @@
     margin-top: 40px;
   }
 
-  div {
+  .graphics {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-direction: column;
     margin: 40px;
     margin-top: 50px;
   }
