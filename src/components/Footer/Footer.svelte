@@ -3,7 +3,7 @@
 </script>
 <style>
     section{
-        background-color: rgb(87, 87, 87);
+        background-color: #000000;
         height:84px;
     }
 </style>

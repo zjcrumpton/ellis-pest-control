@@ -23,7 +23,9 @@
 <DesktopNav {links} toggleOpen={toggleOpen}/>
 <div class="phone">
   <IconifyIcon icon={phoneIcon} color="#d7d8db" />
-  <span>1-800-214-8911</span>
+  <a href="tel:7208282847">
+    <span>720-828-BUGS (2847)</span>
+  </a>
 </div>
 
 <style>
@@ -41,5 +43,10 @@
 
   span { 
     margin-left: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #d7d8db;
   }
 </style>

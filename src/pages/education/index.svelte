@@ -8,7 +8,7 @@
    
 </style>
 <div class="educationLayout">
-    
     <slot />
 </div>
 
+`

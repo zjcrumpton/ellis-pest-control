@@ -6,7 +6,7 @@
 
 <a href={$url('./index')} class="logoContainer">
   <IconifyIcon icon={bugIcon} color={'#01a954'} width={35} />
-  <h1>Ellis Pest Control</h1>
+  <h1>Bed Bug Eliminators</h1>
 </a>
 
 <style>

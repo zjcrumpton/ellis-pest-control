@@ -13,7 +13,7 @@
   }
 </script>
 
-<section transition:fly="{{ x: -500, duration: 800 }}">
+<section in:fly={{x: 500, duration: 500, delay: 500 }} out:fly={{x: -500, duration: 500 }}>
   <div class="content" >
     <div class="textContent">
       <h1>Nobody Likes Bed Bugs</h1>
